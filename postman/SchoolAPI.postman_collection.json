@@ -1,0 +1,65 @@
+{
+  "info": {
+    "name": "School Proximity API",
+    "_postman_id": "4a7f6b9e-1234-4cde-9abc-1234567890ab",
+    "description": "Add School and List Schools sorted by proximity",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add School",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test School\",\n  \"address\": \"123 Street\",\n  \"latitude\": 28.6139,\n  \"longitude\": 77.209\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/addSchool",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "addSchool"
+          ]
+        }
+      }
+    },
+    {
+      "name": "List Schools (sorted)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/listSchools?lat=28.6139&lon=77.2090",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "lat",
+              "value": "28.6139"
+            },
+            {
+              "key": "lon",
+              "value": "77.2090"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
