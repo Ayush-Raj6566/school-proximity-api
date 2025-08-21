@@ -1,5 +1,9 @@
 # School Proximity API (Node.js + MySQL)
 
+## Note
+The repository also contains a `docker-compose.yml` and `Dockerfile`.  
+These were added for local testing and containerization, but the deployed version on Railway uses the standard Node.js setup (not Docker).
+
 Implements two APIs:
 
 - **POST `/addSchool`** — Add a school after validating input.
@@ -68,3 +72,4 @@ Import `postman/SchoolAPI.postman_collection.json` and use the two prepared requ
 - Uses `mysql2/promise` pool.
 - Validates with `Joi`.
 - Distance computed server-side via Haversine great-circle formula.
+
